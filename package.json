@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "shx cp node_modules/vue/dist/vue.js assets/vue.js && cross-env VUE_ENV=server node server.js"
   },
   "author": "Dylan <dylanninin@gmail.com>",
   "license": "MIT",
@@ -13,5 +13,9 @@
     "express": "^4.14.0",
     "vue": "^2.0.8",
     "vue-server-renderer": "^2.0.8"
+  },
+  "devDependencies": {
+    "cross-env": "^3.1.3",
+    "shx": "^0.2.1"
   }
 }
