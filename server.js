@@ -3,10 +3,13 @@
 var fs = require('fs')
 var path = require('path')
 
+// Define global Vue froom server-side app.js
 global.Vue = require('vue')
 
+// Get the HTML layout
 var layout = fs.readFileSync('./index.html', 'utf8')
 
+// Create a renderer
 var renderer = require('vue-server-renderer').createRenderer()
 
 // Create express server
